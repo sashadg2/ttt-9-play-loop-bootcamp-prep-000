@@ -35,6 +35,7 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
+    current_player = "O"
   else
     turn(board)
   end
