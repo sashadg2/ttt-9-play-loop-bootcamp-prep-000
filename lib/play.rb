@@ -12,6 +12,10 @@ def input_to_index(user_input)
 end
 
 def move(board, index, current_player)
+  if current_player == "X"
+    current_player = "O"
+    else current_player = "X"
+  end
   board[index] = current_player
 end
 
@@ -31,10 +35,6 @@ def turn(board)
   if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
-    if current_player == "X"
-      current_player == "O"
-      else current_player == "X"
-    end
   else
     turn(board)
   end
